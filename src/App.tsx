@@ -5,14 +5,17 @@ import { Dashboard } from "./pages/dashboard"
 import { useLoading } from "./state/store"
 
 import { Loading } from "./components/loading"
+import { Landing } from "./pages/landing"
 
 function App() {
   const loading = useLoading()
   return (
 
     <BrowserRouter >
+    
      {loading.loading && <Loading/>}
       <Routes>
+        <Route path="/" element={<Landing/>}/>
         <Route path="/Signin" element={<Signin />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
