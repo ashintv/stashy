@@ -15,8 +15,10 @@ import {
         FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { useConteForm } from "@/state/store"
+import { useConteForm, useLoading } from "@/state/store"
 import { useState } from "react"
+import axios from "axios"
+import { BACKEND_URL } from "@/config"
 
 
 //schema 
@@ -40,10 +42,23 @@ export function ProfileForm() {
 
                 },
         })
+        const loading = useLoading()
 
+        async function onSubmit(values: z.infer<typeof formSchema>) {
+                loading.setLoading(true)
+                const response = await axios.post(BACKEND_URL + '/content', {
+                        title: values.title,
+                        link: values.link,
+                        Type: values.Type
 
-        function onSubmit(values: z.infer<typeof formSchema>) {
-                console.log(values)
+                },{
+                        headers:{
+                                authorization:localStorage.getItem('stashy_token')
+                        }
+                })
+                loading.setLoading(false)
+                console.log(response.data)
+                
         }
         const [type, setType] = useState<'youtube' | 'twitter'>('youtube')
 
@@ -70,7 +85,6 @@ export function ProfileForm() {
                                                         </FormItem>
                                                 )}
                                         />
-
 
                                         <FormField
                                                 control={form.control}
@@ -104,10 +118,10 @@ export function ProfileForm() {
                                         />
 
                                         <div className="flex justify-between text-secondary">
-                                                <Button variant={"ghost"} className={type == 'youtube' ? 'text-red-500 border border-secondary' : ''} onClick={()=>{
+                                                <Button variant={"ghost"} className={type == 'youtube' ? 'text-red-500 border border-secondary' : ''} onClick={() => {
                                                         setType('youtube')
                                                 }}>Youtube</Button>
-                                                <Button variant={"ghost"} className={type == 'twitter' ? 'text-blue-500 border border-secondary' : ''} onClick={()=>{
+                                                <Button variant={"ghost"} className={type == 'twitter' ? 'text-blue-500 border border-secondary' : ''} onClick={() => {
                                                         setType('twitter')
                                                 }}>Twitter</Button>
                                         </div>
