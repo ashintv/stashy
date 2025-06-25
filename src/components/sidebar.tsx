@@ -1,5 +1,4 @@
 import { useSidebar } from "@/state/store"
-import type { ReactElement } from "react"
 
 export function Sidebar({ isVisible }: { isVisible: boolean }) {
         const { selected, setSelected } = useSidebar()

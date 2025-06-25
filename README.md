@@ -9,7 +9,10 @@ TODO:
 
 1 . Add element form - done
 2 . stich all - after beckend
-3 . connect to backend 
+3 . connect to backend  - 
+    a. auth -done
+    b. add content
+    c. get all data
 4 . dashboard data
 5 . Live
 .............

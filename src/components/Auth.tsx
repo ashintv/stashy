@@ -30,7 +30,7 @@ export function AuthPage(props: AuthPageI) {
         let auth = props.isSignin
         const loading = useLoading()
         const navigate = useNavigate()
-        async function authFun(auth_info :boolean) {
+        async function authFun(auth_info: boolean) {
                 if (auth_info) {
                         loading.setLoading(true)
                         const response = await axios.post(BACKEND_URL + '/signin', {
@@ -45,7 +45,7 @@ export function AuthPage(props: AuthPageI) {
                 }
                 else {
                         loading.setLoading(true)
-                        const response = await axios.post(BACKEND_URL + '/signup', {
+                        await axios.post(BACKEND_URL + '/signup', {
                                 username: username,
                                 password: password
                         })
@@ -98,7 +98,7 @@ export function AuthPage(props: AuthPageI) {
                                 </div>
 
                         </CardContent>
-                        <CardFooter className="flex-col gap-2" onClick={()=>{
+                        <CardFooter className="flex-col gap-2" onClick={() => {
                                 authFun(props.isSignin)
                         }}>
                                 <Button type="submit" className="w-full">
