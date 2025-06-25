@@ -18,8 +18,9 @@ export function Signin() {
 
                         </div>
                         <div className="bg-primary text-accent-foreground col-span-1 mt-10 rounded-tl-full place-content-center place-items-center rounded-t-2xl">
-                                <AuthPage isSignin />
+                                <AuthPage isSignin/>
                         </div>
+                        
                 </div>
         )
 }

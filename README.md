@@ -7,9 +7,9 @@
 
 TODO:
 
-1 . Add element form 
-2 . stich all
-3 . connect to backend
+1 . Add element form - done
+2 . stich all - after beckend
+3 . connect to backend 
 4 . dashboard data
 5 . Live
 .............

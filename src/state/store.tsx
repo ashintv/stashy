@@ -22,3 +22,14 @@ export const useConteForm = create<useContentState>((set) => ({
   visible: false,
   setVisible: (value) => set({ visible: value }),
 }));
+
+interface useLoadingState {
+  loading: boolean
+  setLoading: (value:boolean)=>void
+}
+
+export const useLoading = create<useLoadingState>((set)=> ({
+  loading: false,
+  setLoading: (value) => set({ loading: value }),
+
+}))
