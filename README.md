@@ -1,87 +1,48 @@
-# React + TypeScript + Vite
+
+# Stashy
+Stashy is a sleek and intuitive app that allows users to store, tag, and categorize useful web links for later access. Whether you’re managing resources, research, or personal favorites, Stashy helps you stay organized and productive.
 
 
+## Tech Stack
+
+**Client:** React, Zustand , TailwindCSS ,axios
+
+**Server:** Node, Express , Mongodb
 
 
+## Run Locally
 
+Clone the project
 
-TODO:
-
-1 . Add element form - done
-2 . stich all - after beckend
-3 . connect to backend  - 
-    a. auth -done
-    b. add content
-    c. get all data
-4 . dashboard data
-5 . Live
-.............
-6 . Facebook , docs , thread , insta , linkdn
-7 . RAG
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+  https://github.com/ashintv/stashy.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Go to the project directory
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+  cd stashy
 ```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+## Demo
+[stashy.ashin.live](https://stashy.ashin.live)
+
+##
+[server-code](https://github.com/ashintv/second-brain-b)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
