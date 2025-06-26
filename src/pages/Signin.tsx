@@ -2,7 +2,7 @@ import { AuthPage } from "@/components/Auth";
 
 export function Signin() {
         return (
-                <div className=" grid grid-cols-2 w-screen h-screen   gap-1 ">
+                <div className="hidden md:grid md:grid-cols-2 md:w-screen md:h-screen   gap-1 ">
                         <div className="col-span-1 h-full bg-primary rounded-br-full flex ">
                                 <div className="mt-20 ml-10 max-w-xl">
                                         <h1 className="scroll-m-20 text-center text-[100px] font-stretch-200% font-extrabold tracking-tight text-balance text-secondary">
