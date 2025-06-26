@@ -21,6 +21,7 @@ import axios from "axios"
 import { BACKEND_URL } from "@/config"
 
 
+
 //schema 
 const formSchema = z.object({
         title: z.string().min(1, 'Title is required'),
@@ -43,24 +44,26 @@ export function ProfileForm() {
                 },
         })
         const loading = useLoading()
+        const [type, setType] = useState<'youtube' | 'twitter'>('youtube')
 
         async function onSubmit(values: z.infer<typeof formSchema>) {
                 loading.setLoading(true)
                 const response = await axios.post(BACKEND_URL + '/content', {
                         title: values.title,
                         link: values.link,
-                        Type: values.Type
+                        Type: type
 
                 },{
                         headers:{
                                 authorization:localStorage.getItem('stashy_token')
                         }
                 })
+                setform.setVisible(false)
                 loading.setLoading(false)
                 console.log(response.data)
                 
         }
-        const [type, setType] = useState<'youtube' | 'twitter'>('youtube')
+       
 
         return (
                 <div className="p-10 bg-primary/98 border-2 min-w-2xl border-primary rounded-3xl shadow-2xl shadow-secondary">
@@ -118,10 +121,10 @@ export function ProfileForm() {
                                         />
 
                                         <div className="flex justify-between text-secondary">
-                                                <Button variant={"ghost"} className={type == 'youtube' ? 'text-red-500 border border-secondary' : ''} onClick={() => {
+                                                <Button type="button" variant={"ghost"} className={type == 'youtube' ? 'text-red-500 border border-secondary' : ''} onClick={() => {
                                                         setType('youtube')
                                                 }}>Youtube</Button>
-                                                <Button variant={"ghost"} className={type == 'twitter' ? 'text-blue-500 border border-secondary' : ''} onClick={() => {
+                                                <Button type="button" variant={"ghost"} className={type == 'twitter' ? 'text-blue-500 border border-secondary' : ''} onClick={() => {
                                                         setType('twitter')
                                                 }}>Twitter</Button>
                                         </div>
