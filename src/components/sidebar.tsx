@@ -3,7 +3,7 @@ import { useSidebar } from "@/state/store"
 export function Sidebar({ isVisible }: { isVisible: boolean }) {
         const { selected, setSelected } = useSidebar()
         return (
-                isVisible && <div className="transition-all fixed bottom-0 duration-200 bg-primary border-secondary border-r-2  rounded-br-[100px] rounded-tr-[100px] w-full scroll-auto overflow-x-scroll md:w-72 md:h-full
+                isVisible && <div className="transition-all fixed md:static bottom-0 duration-200 bg-primary border-secondary border-r-2  rounded-br-[100px] rounded-tr-[100px] w-full scroll-auto overflow-x-scroll md:w-72 md:h-full
                 grid grid-rows-10 overflow-hidden outline-2 hover:border-ring hover:ring-ring/20 hover:ring-[6px]
                 shadow-xl  shadow-secondary hover:shadow-2xl group
                   ">

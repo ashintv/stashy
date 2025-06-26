@@ -33,7 +33,7 @@ export function Dashboard() {
                                
 
                                 <Sidebar isVisible={sidebar} />
-                                <div className={`p-10 mt-15  scroll-auto overflow-x-scroll  flex flex-wrap justify-center gap-5 ${sidebar ? "md:absolute md:right-0 md:w-8/10" : "w-full"}`}>
+                                <div className={`p-10 mt-15  scroll-auto overflow-x-scroll  flex flex-wrap justify-center gap-5 ${sidebar ? " md:w-8/10 " : "md:w-full"}`}>
 
                                         {
 
