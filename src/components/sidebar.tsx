@@ -17,7 +17,7 @@ export function Sidebar({ isVisible }: { isVisible: boolean }) {
                                 <Label selected={selected == 'youtube'} name={"Youtube"} onClick={() => {
                                         setSelected('youtube')
                                 }} />
-                                <Label selected={selected == 'tweet'} name={"Tweet / X"} onClick={() => {
+                                <Label selected={selected == 'twitter'} name={"Tweet / X"} onClick={() => {
                                          setSelected('twitter')
                                 }} />
                                 <Label selected={selected == 'thread'} name={"Thread"} onClick={() => {

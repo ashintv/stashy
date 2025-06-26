@@ -64,7 +64,7 @@ export function AuthPage(props: AuthPageI) {
 
         return (
 
-                <Card className="w-full max-w-sm hover:border-ring hover:ring-ring/20 hover:ring-[6px]">
+                <Card className="w-full max-w-sm  hover:border-ring hover:ring-ring/20 hover:ring-[6px]">
                         <CardHeader>
                                 <CardTitle>{auth ? "Login to your account" : "Create a new account"}</CardTitle>
                                 <CardDescription>
