@@ -18,7 +18,7 @@ export function Sidebar({ isVisible }: { isVisible: boolean }) {
                                         setSelected('youtube')
                                 }} />
                                 <Label selected={selected == 'tweet'} name={"Tweet / X"} onClick={() => {
-                                         setSelected('tweet')
+                                         setSelected('twitter')
                                 }} />
                                 <Label selected={selected == 'thread'} name={"Thread"} onClick={() => {
                                         setSelected('thread')
