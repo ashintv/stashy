@@ -43,13 +43,7 @@ export function Landing() {
                         </div>
                         
                 </div>
-                <div className="fixed bg-red-800 right-0 bottom-0">
-                                <p>
-                                        The website is under development
-                                </p>
-
-                        </div>
-
+t a
                 <Signin />
         </>
         );
