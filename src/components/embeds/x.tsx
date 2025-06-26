@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 
 const XPostEmbed = ({ url }: { url: string }) => {
@@ -15,9 +16,11 @@ const XPostEmbed = ({ url }: { url: string }) => {
   }, []);
 
   return (
-    <blockquote className="twitter-tweet w-fit rounded-2xl">
+    <div className='max-w-xs '>
+      <blockquote className="twitter-tweet  md:rounded-2xl">
       <a href={url.replace('x.com','twitter.com')}></a>
     </blockquote>
+    </div>
   );
 };
 

@@ -66,11 +66,11 @@ export function ProfileForm() {
        
 
         return (
-                <div className="p-10 bg-primary/98 border-2 min-w-2xl border-primary rounded-3xl shadow-2xl shadow-secondary">
+                <div className="p-10 bg-primary/98 border-2 md:min-w-xl border-primary rounded-3xl shadow-2xl shadow-secondary">
                         <div className=" flex justify-end text-secondary"> <Button variant={"ghost"} onClick={() => {
                                 setform.setVisible(false)
                         }}>X</Button></div>
-                        <Form {...form} >
+                        <Form {...form}  >
                                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                                         <FormField
                                                 control={form.control}

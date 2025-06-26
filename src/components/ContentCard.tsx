@@ -41,7 +41,7 @@ export function ContentCard(props: ContentCardI) {
                 <>
 
 
-                        <Card className={` h-fit w-fit mt-10  text-secondary shadow-secondary  group hover:scale-101  border-none shadow-xl/30  outline-2 bg-primary}`
+                        <Card className={`h-fit  mt-10  text-secondary shadow-secondary  group hover:scale-101  border-none shadow-xl/30  outline-2 bg-primary `
                         } >
                                 {loading && <Loading />}
                                 <CardHeader className="transition duration-500 group-hover:scale-104  group-hover:translate-1  ">
@@ -54,7 +54,7 @@ export function ContentCard(props: ContentCardI) {
                                 <CardContent >
 
                                         <div className="flex justify-between items-baseline">
-                                                <p className="mb-2 text-xs font-stretch-125% text-muted-foreground">10-12-2025</p>
+                                                <p className="mb-2  text-xs font-stretch-125% text-muted-foreground">10-12-2025</p>
                                         </div>
 
                                         {

@@ -30,10 +30,10 @@ export function Dashboard() {
         return (
                 <>
                         <div className="fixed h-screen w-screen flex  bg-primary">
-                                <Button className="fixed m-2 border-2 border-secondary " onClick={hideSidebar}>O</Button>
+                               
 
                                 <Sidebar isVisible={sidebar} />
-                                <div className={`p-10 mt-15  scroll-auto overflow-x-scroll  flex flex-wrap justify-center gap-5 ${sidebar ? "w-8/10 " : " w-full"}`}>
+                                <div className={`p-10 mt-15  scroll-auto overflow-x-scroll  flex flex-wrap justify-center gap-5 ${sidebar ? "md:absolute md:right-0 md:w-8/10" : "w-full"}`}>
 
                                         {
 
@@ -60,6 +60,7 @@ export function Dashboard() {
                                 <Button variant={"default"} className="border-2 hover:scale-105">Share</Button>
                         </div>
                         {visible && <AddForm></AddForm>}
+                         <Button className="fixed m-2 border-2 border-secondary " onClick={hideSidebar}>O</Button>
 
                 </>
 
