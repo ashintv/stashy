@@ -5,6 +5,7 @@ interface SidebarState {
   setSelected: (select: string) => void;
 }
 
+
 export const useSidebar = create<SidebarState>((set) => ({
   selected: 'youtube',
   setSelected: (select: string) => set({ selected: select }),
@@ -13,6 +14,10 @@ export const useSidebar = create<SidebarState>((set) => ({
 
 
 
+interface useChatbotState {
+  chatbot: boolean;
+  setChatbot: (value: boolean) => void;
+}
 interface useContentState {
   visible: boolean;
   setVisible: (value: boolean) => void;
@@ -21,6 +26,11 @@ interface useContentState {
 export const useConteForm = create<useContentState>((set) => ({
   visible: false,
   setVisible: (value) => set({ visible: value }),
+}));
+
+export const useChatbot = create<useChatbotState>((set) => ({
+  chatbot : false,
+  setChatbot: (value) => set({ chatbot: value }),
 }));
 
 interface useLoadingState {
