@@ -10,7 +10,6 @@ export function useContent() {
                                 'authorization': localStorage.getItem('stashy_token')
                         }
                 }).then((response) => {
-                        console.log(response.data)
                         setContent(response.data)
 
                 })
